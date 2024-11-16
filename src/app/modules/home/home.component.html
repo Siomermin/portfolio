@@ -1,0 +1,78 @@
+<div *ngIf="userData" class="profile-container">
+  <div class="profile-header">
+    <!-- Foto y datos del perfil -->
+    <div class="profile-left">
+      <img
+        [src]="userData.avatar_url"
+        alt="Foto de perfil"
+        class="profile-avatar"
+      />
+      <h1>{{ userData.name }}</h1>
+      <p class="username">Software Developer</p>
+
+      <p *ngIf="userData.bio">{{ userData.bio }}</p>
+      <p *ngIf="userData.location">
+        {{ userData.location }}
+      </p>
+      <p *ngIf="userData.company">
+        {{ userData.company }}
+      </p>
+    </div>
+
+    <!-- Experiencia -->
+    <div class="profile-right">
+      <div class="experience-section">
+        <h2>Experiencia</h2>
+        <div class="experience-item">
+          <h3>Software Developer</h3>
+          <div class="experience-info">
+            <p><strong>Mercado Libre</strong> • Buenos Aires, Argentina</p>
+            <p>nov. 2024 - actualidad</p>
+          </div> 
+        </div>
+        <div class="experience-item">
+          <h3>Software Developer</h3>
+          <div class="experience-info">
+            <p><strong>TGV</strong> • Buenos Aires, Argentina</p>
+            <p>abr. 2023 - nov. 2024</p>
+          </div> 
+        </div>
+      </div>
+
+      <!-- Educacion -->
+      <div class="education-section">
+        <h2>Educación</h2>
+        <div class="education-item">
+          <h3>Tecnicatura Universitaria en Programación</h3>
+          <div class="experience-info">
+            <p><strong>UTN</strong> • Buenos Aires, Argentina</p>
+            <p>jul. 2021 - jul. 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyectos -->
+      <div *ngIf="pinnedRepos.length > 0" class="pinned-repos-container">
+        <h2>Proyectos</h2>
+        <div class="repos-grid">
+          <div class="pinned-repo" *ngFor="let repo of pinnedRepos">
+            <h3>
+              <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
+            </h3>
+            <p>{{ repo.description }}</p>
+            <p>
+            {{ repo.language }}
+            </p>
+          </div>
+        </div>
+        <div class="contributions-center">
+          <img
+            [src]="'https://ghchart.rshah.org/' + userData.login"
+            alt="Gráfico de contribuciones"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
