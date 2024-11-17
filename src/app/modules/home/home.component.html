@@ -1,6 +1,5 @@
 <div *ngIf="userData" class="profile-container">
   <div class="profile-header">
-    <!-- Foto y datos del perfil -->
     <div class="profile-left">
       <img
         [src]="userData.avatar_url"
@@ -10,13 +9,29 @@
       <h1>{{ userData.name }}</h1>
       <p class="username">Software Developer</p>
 
-      <p *ngIf="userData.bio">{{ userData.bio }}</p>
-      <p *ngIf="userData.location">
-        {{ userData.location }}
-      </p>
-      <p *ngIf="userData.company">
-        {{ userData.company }}
-      </p>
+      <div class="info-group">
+        <p>
+          <fa-icon [icon]="faLocationDot"></fa-icon> {{ userData.location }}
+        </p>
+        <p>
+          <fa-icon [icon]="faEnvelope"></fa-icon>
+          fermingonzalez011&#64;gmail.com
+        </p>
+        <p>
+          <fa-icon [icon]="faGithub"></fa-icon>
+          <a [href]="userData.html_url" target="_blank">Siomermin</a>
+        </p>
+        <p>
+          <fa-icon [icon]="faLinkedin"></fa-icon>
+          <a href="https://www.linkedin.com/in/fermingonzalez/" target="_blank"
+            >Linkedin</a
+          >
+        </p>
+      </div>
+
+      <br><br>
+      <img src="assets/red-maple.jpeg" alt="Red Maple">
+
     </div>
 
     <!-- Experiencia -->
@@ -28,14 +43,14 @@
           <div class="experience-info">
             <p><strong>Mercado Libre</strong> • Buenos Aires, Argentina</p>
             <p>nov. 2024 - actualidad</p>
-          </div> 
+          </div>
         </div>
         <div class="experience-item">
           <h3>Software Developer</h3>
           <div class="experience-info">
             <p><strong>TGV</strong> • Buenos Aires, Argentina</p>
             <p>abr. 2023 - nov. 2024</p>
-          </div> 
+          </div>
         </div>
       </div>
 
@@ -61,7 +76,7 @@
             </h3>
             <p>{{ repo.description }}</p>
             <p>
-            {{ repo.language }}
+              {{ repo.language }}
             </p>
           </div>
         </div>
@@ -74,5 +89,4 @@
       </div>
     </div>
   </div>
-
 </div>
