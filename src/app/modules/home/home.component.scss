@@ -6,6 +6,12 @@
   overflow: hidden; 
 }
 
+.profile-left img {
+  max-width: 100%; 
+  height: auto;   
+  margin: 0 auto;  
+}
+
 body {
   background-color: #f4f4f9;
   display: flex;
@@ -37,13 +43,40 @@ body {
 }
 
 
+
 .profile-left {
-  flex: 1; 
-  max-width: 40%; 
-  text-align: center; 
-  margin-right: 0; 
-  padding-left: 20px;  
+  flex: 1;
+  max-width: 40%;
+  text-align: center;
+  margin-right: 30px;
+  padding-left: 20px;
 }
+
+.profile-left .info-group {
+  margin-top: 15px;
+  line-height: 1.8;
+}
+
+.profile-left .info-group p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.profile-left a {
+  color: #2d87f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.profile-left a:hover {
+  color: #1a5dbb;
+}
+
+
 
 /* Columna derecha (experiencia, educación, etc.) */
 .profile-right {
@@ -55,10 +88,11 @@ body {
 
 
 .profile-avatar {
-  width: 140px;
-  height: 140px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 .profile-left h1 {
@@ -179,6 +213,10 @@ h2 {
     flex-direction: column;
   }
 
+  // .profile-left img[alt="Red Maple"] {
+  //   display: none; 
+  // }
+
   .profile-left,
   .profile-right {
     max-width: 100%;
@@ -189,6 +227,5 @@ h2 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
   }
-
 
 }
