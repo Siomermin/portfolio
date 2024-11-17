@@ -1,0 +1,49 @@
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .theme-toggle button {
+    background: var(--card-background-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .theme-toggle button:hover {
+    background: var(--link-color);
+    color: var(--background-color);
+  }
+  
+
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: opacity 0.6s ease-in-out;
+  }
+  
+  .theme-toggle button {
+    background: none;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+  
+  .theme-toggle.ng-leave {
+    opacity: 0;
+  }
+  
+  .theme-toggle.ng-enter {
+    opacity: 1;
+  }
+  
+
+  
