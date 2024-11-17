@@ -1,1 +1,9 @@
+<div class="theme-toggle" *ngIf="showButton">
+    <button (click)="toggleTheme()">
+      <fa-icon [icon]="isDarkMode ? faSun : faMoon"></fa-icon>
+    </button>
+  </div>
+  
+  
+  
 <router-outlet></router-outlet>
