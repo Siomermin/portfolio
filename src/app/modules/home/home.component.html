@@ -13,26 +13,7 @@
       <home-education></home-education>
 
       <!-- Proyectos -->
-      <div *ngIf="pinnedRepos.length > 0" class="pinned-repos-container">
-        <h2>Proyectos</h2>
-        <div class="repos-grid">
-          <div class="pinned-repo" *ngFor="let repo of pinnedRepos">
-            <h3>
-              <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
-            </h3>
-            <p>{{ repo.description }}</p>
-            <p>
-              {{ repo.language }}
-            </p>
-          </div>
-        </div>
-        <div class="contributions-center">
-          <img
-            [src]="'https://ghchart.rshah.org/' + userData.login"
-            alt="Gráfico de contribuciones"
-          />
-        </div>
-      </div>
+      <home-projects [userLogin]="userData.login" [pinnedRepos]="pinnedRepos"></home-projects>
     </div>
   </div>
 </div>

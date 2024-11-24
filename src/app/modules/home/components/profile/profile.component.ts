@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { faUser, faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-
+ 
 @Component({
   selector: 'home-profile',
   templateUrl: './profile.component.html',

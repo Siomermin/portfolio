@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 
 @NgModule({
@@ -15,10 +16,11 @@ import { EducationComponent } from './components/education/education.component';
     HomeComponent,
     ProfileComponent,
     ExperienceComponent,
-    EducationComponent
+    EducationComponent,
+    ProjectsComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule, 
     HomeRoutingModule,
     FontAwesomeModule
     

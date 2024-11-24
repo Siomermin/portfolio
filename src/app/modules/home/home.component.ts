@@ -12,8 +12,6 @@ export class HomeComponent implements OnInit {
   userData: any;
   pinnedRepos: any[] = [];
 
-
-  
   constructor(private githubService: GithubService) {}
 
   ngOnInit(): void {
