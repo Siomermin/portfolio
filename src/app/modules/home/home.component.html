@@ -1,92 +1,18 @@
-<div *ngIf="userData" class="profile-container">
-  <div class="profile-header">
-    <div class="profile-left">
-      <img
-        [src]="userData.avatar_url"
-        alt="Foto de perfil"
-        class="profile-avatar"
-      />
-      <h1>{{ userData.name }}</h1>
-      <p class="username">Software Developer</p>
-
-      <div class="info-group">
-        <p>
-          <fa-icon [icon]="faLocationDot"></fa-icon> {{ userData.location }}
-        </p>
-        <p>
-          <fa-icon [icon]="faEnvelope"></fa-icon>
-          fermingonzalez011&#64;gmail.com
-        </p>
-        <p>
-          <fa-icon [icon]="faGithub"></fa-icon>
-          <a [href]="userData.html_url" target="_blank">Siomermin</a>
-        </p>
-        <p>
-          <fa-icon [icon]="faLinkedin"></fa-icon>
-          <a href="https://www.linkedin.com/in/fermingonzalez/" target="_blank"
-            >Linkedin</a
-          >
-        </p>
-      </div>
-
-      <br><br>
-      <img src="assets/red-maple.jpeg" alt="Red Maple">
-
-    </div>
+<div *ngIf="userData" class="home-container">
+  <div class="home-display">
+    <section class="home-left">
+      <home-profile [userData]="userData"></home-profile>
+    </section>
 
     <!-- Experiencia -->
-    <div class="profile-right">
-      <div class="experience-section">
-        <h2>Experiencia</h2>
-        <div class="experience-item">
-          <h3>Software Developer</h3>
-          <div class="experience-info">
-            <p><strong><a href="https://careers-meli.mercadolibre.com/" target="_blank">Mercado Libre</a></strong> • Buenos Aires, Argentina</p>            
-            <p>nov. 2024 - actualidad</p>
-          </div>
-        </div>
-        <div class="experience-item">
-          <h3>Software Developer</h3>
-          <div class="experience-info">
-            <p><strong><a href="https://tgv.com.ar/" target="_blank">TGV</a></strong> • Buenos Aires, Argentina</p>
-            <p>abr. 2023 - nov. 2024</p>
-          </div>
-        </div>
-      </div>
+    <section class="home-right">
+      <home-experience></home-experience>
 
       <!-- Educacion -->
-      <div class="education-section">
-        <h2>Educación</h2>
-        <div class="education-item">
-          <h3>Tecnicatura Universitaria en Programación</h3>
-          <div class="experience-info">
-            <p><strong>UTN</strong> • Buenos Aires, Argentina</p>
-            <p>jul. 2021 - jul. 2024</p>
-          </div>
-        </div>
-      </div>
+      <home-education></home-education>
 
-      <!-- Proyectos -->
-      <div *ngIf="pinnedRepos.length > 0" class="pinned-repos-container">
-        <h2>Proyectos</h2>
-        <div class="repos-grid">
-          <div class="pinned-repo" *ngFor="let repo of pinnedRepos">
-            <h3>
-              <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
-            </h3>
-            <p>{{ repo.description }}</p>
-            <p>
-              {{ repo.language }}
-            </p>
-          </div>
-        </div>
-        <div class="contributions-center">
-          <img
-            [src]="'https://ghchart.rshah.org/' + userData.login"
-            alt="Gráfico de contribuciones"
-          />
-        </div>
-      </div>
-    </div>
+      <!-- Proyectos --> 
+      <home-projects [userLogin]="userData.login" [pinnedRepos]="pinnedRepos"></home-projects>
+    </section>
   </div>
 </div>

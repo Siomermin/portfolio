@@ -1,0 +1,59 @@
+.experience-section {
+    margin-top: 20px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    font-size: 16.5px;
+    color: var(--link-color, #2d87f0);
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    font-size: 14px;
+    color: var(--text-color, #555);
+    margin: 5px 0;
+}
+
+.experience-info a {
+    color: var(--link-color, #2d87f0);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.experience-info a:hover {
+    color: var(--link-hover-color, #1a5dbb);
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 22px;
+    color: var(--text-color, #333);
+}
+
+.tech-badges {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background-color: var(--badge-background-color, #e0e0e0);
+    color: var(--badge-text-color, #333);
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+
+.badge:hover {
+    background-color: var(--badge-hover-color, #2d87f0);
+    color: white;
+}

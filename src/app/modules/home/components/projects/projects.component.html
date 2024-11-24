@@ -1,0 +1,20 @@
+<div *ngIf="pinnedRepos.length > 0" class="pinned-repos-container">
+    <h2>Proyectos</h2>
+    <div class="repos-grid">
+      <div class="pinned-repo" *ngFor="let repo of pinnedRepos">
+        <h3>
+          <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
+        </h3>
+        <p>{{ repo.description }}</p>
+        <p>
+          <span class="badge">{{ repo.language }}</span>         
+        </p>
+      </div>
+    </div>
+    <div class="contributions-center">
+      <img
+        [src]="'https://ghchart.rshah.org/' + userLogin"
+        alt="Gráfico de contribuciones"
+      />
+    </div>
+  </div> 

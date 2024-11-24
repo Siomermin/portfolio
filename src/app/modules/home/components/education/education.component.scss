@@ -1,0 +1,35 @@
+.education-section {
+    margin-top: 20px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    font-size: 16.5px;
+    color: var(--link-color, #2d87f0);
+    margin-bottom: 5px;
+}
+
+.education-item p {
+    font-size: 14px;
+    color: var(--text-color, #555);
+    margin: 5px 0;
+}
+
+.education-item a {
+    color: var(--link-color, #2d87f0);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .education-item a:hover {
+    color: var(--link-hover-color, #1a5dbb);
+  }
+
+  h2 {
+    margin-top: 40px;
+    font-size: 22px;
+    color: var(--text-color, #333);
+}
