@@ -1,0 +1,30 @@
+<img
+[src]="userData.avatar_url"
+alt="Foto de perfil"
+class="profile-avatar"
+/>
+<h1>{{ userData.name }}</h1>
+<p class="username">Software Developer</p>
+
+<div class="info-group">
+<p>
+  <fa-icon [icon]="faLocationDot"></fa-icon> {{ userData.location }}
+</p>
+<p>
+  <fa-icon [icon]="faEnvelope"></fa-icon>
+  fermingonzalez011&#64;gmail.com
+</p>
+<p>
+  <fa-icon [icon]="faGithub"></fa-icon>
+  <a [href]="userData.html_url" target="_blank">Siomermin</a>
+</p>
+<p>
+  <fa-icon [icon]="faLinkedin"></fa-icon>
+  <a href="https://www.linkedin.com/in/fermingonzalez/" target="_blank"
+    >Linkedin</a
+  >
+</p>
+</div>
+
+<br><br>
+<img src="assets/red-maple.jpeg" alt="Red Maple">
