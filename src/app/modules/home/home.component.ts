@@ -17,12 +17,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.githubService.getUser().subscribe((data) => {
       this.userData = data;
-      console.log(this.userData);
     });
 
     this.githubService.getRepos().subscribe((repos) => {
       this.pinnedRepos = repos;
-      console.log(this.pinnedRepos);
     });
   }
  
