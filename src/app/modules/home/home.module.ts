@@ -6,12 +6,14 @@ import { HomeComponent } from './home.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    ExperienceComponent
   ],
   imports: [
     CommonModule,
