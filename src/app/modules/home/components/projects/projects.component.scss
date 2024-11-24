@@ -1,7 +1,11 @@
+h3 {
+    margin: 10px 0px 0px 0px;
+    padding: 0;
+}
 
 h2 {
+    margin-top: 40px;
     font-size: 22px;
-    margin-bottom: 15px;
     color: var(--text-color, #333);
 }
 
@@ -22,30 +26,28 @@ h2 {
     max-width: 700px;
 }
 
+
 .pinned-repo {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;   
     flex: 1 1 calc(50% - 10px);
     border: 1px solid var(--border-color, #ddd);
     border-radius: 8px;
     background-color: var(--card-background-color, #f9f9f9);
-    padding: 0px 10px 10px;
+    padding: 0px 15px 10px 15px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.pinned-repo h3 a {
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--link-color, #2d87f0);
-    text-decoration: none;
-}
 
 .pinned-repo p {
     font-size: 13px;
     color: var(--text-color, #555);
-    margin: 5px 0;
+    margin: 7px 0px;
     line-height: 1.4; 
 }
 
-.pinned-repo h3 a {
+.pinned-repo a {
     font-size: 14px;
     font-weight: bold;
     color: var(--link-color, #2d87f0);
@@ -72,6 +74,22 @@ h2 {
     width: 100%;
     max-width: 700px;
     height: auto;
+}
+
+.badge {
+    background-color: var(--badge-background-color, #e0e0e0);
+    color: var(--badge-text-color, #333);
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+
+.badge:hover {
+    background-color: var(--badge-hover-color, #2d87f0);
+    color: white;
 }
 
 @media (max-width: 768px) {

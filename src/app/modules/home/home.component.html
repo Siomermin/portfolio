@@ -1,19 +1,18 @@
-<div *ngIf="userData" class="profile-container">
-  <div class="profile-header">
-    <div class="profile-left">
+<div *ngIf="userData" class="home-container">
+  <div class="home-display">
+    <section class="home-left">
       <home-profile [userData]="userData"></home-profile>
-
-    </div>
+    </section>
 
     <!-- Experiencia -->
-    <div class="profile-right">
+    <section class="home-right">
       <home-experience></home-experience>
 
       <!-- Educacion -->
       <home-education></home-education>
 
-      <!-- Proyectos -->
+      <!-- Proyectos --> 
       <home-projects [userLogin]="userData.login" [pinnedRepos]="pinnedRepos"></home-projects>
-    </div>
+    </section>
   </div>
 </div>

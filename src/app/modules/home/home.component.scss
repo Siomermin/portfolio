@@ -1,24 +1,15 @@
-body {
-  background-color: var(--background-color, #f4f4f9); /* Valor por defecto */
-  color: var(--text-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.profile-container {
+.home-container {
   background-color: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 23px 20px;
+  padding: 20px 20px;
   gap: 30px;
   min-height: 100vh;
 }
 
-.profile-header {
+.home-display {
   display: flex;
   flex-grow: 1; 
   max-width: 1200px; 
@@ -28,15 +19,16 @@ body {
   gap: 0; 
 }
 
-.profile-left {
+.home-left {
   flex: 1;
   max-width: 40%;
   text-align: center;
+  margin-top: 20px;
   margin-right: 30px;
   padding-left: 20px;
 }
 
-.profile-right {
+.home-right {
   flex: 2;
   max-width: 60%;
   padding: 0 20px;
@@ -45,12 +37,12 @@ body {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .profile-header {
+  .home-display {
     flex-direction: column;
   }
 
-  .profile-left,
-  .profile-right {
+  .home-left,
+  .home-right {
     max-width: 100%;
   }
 

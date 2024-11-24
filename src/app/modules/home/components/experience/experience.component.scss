@@ -22,15 +22,15 @@
     color: var(--link-color, #2d87f0);
     text-decoration: none;
     transition: color 0.3s ease;
-  }
-  
-  .experience-info a:hover {
+}
+
+.experience-info a:hover {
     color: var(--link-hover-color, #1a5dbb);
-  }
+}
 
 h2 {
+    margin-top: 40px;
     font-size: 22px;
-    margin-bottom: 15px;
     color: var(--text-color, #333);
 }
 
