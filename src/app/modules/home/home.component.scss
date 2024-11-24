@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 10px 20px 20px 20px;
+  padding: 0px 20px 0px 20px;
   gap: 30px;
   min-height: 100vh;
 }
@@ -23,15 +23,13 @@
   flex: 1;
   max-width: 40%;
   text-align: center;
-  margin-top: 20px;
-  margin-right: 30px;
-  padding-left: 20px;
+  margin: 20px 20px 0px 20px;
 }
 
 .home-right {
   flex: 2;
   max-width: 60%;
-  padding: 0 20px;
+  margin: 0px 20px 20px 20px;
 }
 
 
