@@ -15,12 +15,11 @@ export class AppComponent {
     this.initializeTheme();
   }
 
-  showButton: boolean = true;  // Variable para controlar si mostrar el botón
+  showButton: boolean = true; 
 
   // Detectar el desplazamiento
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // Si el scroll es mayor a 100px, ocultar el botón
     this.showButton = window.scrollY <= 100;
   }
 
