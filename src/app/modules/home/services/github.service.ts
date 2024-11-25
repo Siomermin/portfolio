@@ -10,12 +10,10 @@ export class GithubService {
   private readonly reposApiUrl = 'https://api.github.com/users/siomermin/repos?per_page=100';
 
   private pinnedRepoNames = [
+    "sala-de-juegos",
+    "AFI-2024",
     "relevamiento-visual",
     "tabla-didactica",
-    "alarma-de-robo",
-   // "chat-aula",
-   // "carga-de-credito",
-    "AFI-2024"
   ];
 
   constructor(private http: HttpClient) {}

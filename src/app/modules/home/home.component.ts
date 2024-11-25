@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
     });
 
     this.githubService.getRepos().subscribe((repos) => {
+      console.log(repos);
       this.pinnedRepos = repos;
     });
   }
