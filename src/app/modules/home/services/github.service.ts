@@ -12,8 +12,8 @@ export class GithubService {
   private pinnedRepoNames = [
     "sala-de-juegos",
     "AFI-2024",
-    "relevamiento-visual",
-    "tabla-didactica",
+    // "relevamiento-visual",
+    // "tabla-didactica",
   ];
 
   constructor(private http: HttpClient) {}
